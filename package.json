@@ -12,8 +12,14 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "npm run lint --fix"
+      "npm run lint --fix",
+      "npm test --bail"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-coomit": "lint-staged"
+    }
   },
   "dependencies": {
     "next": "10.2.3",
