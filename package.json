@@ -13,7 +13,7 @@
   "lint-staged": {
     "src/**/*": [
       "npm run lint --fix",
-      "npm test --bail"
+      "npm test --findRelatedTests --bail"
     ]
   },
   "husky": {
